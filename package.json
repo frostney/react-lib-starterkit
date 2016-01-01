@@ -1,0 +1,52 @@
+{
+  "name": "react-lib-starterkit",
+  "version": "1.0.0",
+  "description": "Starterkit for React libraries",
+  "main": "dist/index.js",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "node rollup.build.js",
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "karma start .",
+    "precommit": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frostney/react-lib-starterkit.git"
+  },
+  "keywords": [
+    "react",
+    "lib",
+    "starterkit",
+    "boilerplate"
+  ],
+  "author": "Johannes Stein",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frostney/react-lib-starterkit/issues"
+  },
+  "homepage": "https://github.com/frostney/react-lib-starterkit#readme",
+  "dependencies": {
+    "react": "^0.14.5"
+  },
+  "devDependencies": {
+    "babel-eslint": "^4.1.6",
+    "babel-plugin-transform-class-properties": "^6.3.13",
+    "babel-preset-es2015-loose-rollup": "^6.3.1",
+    "babel-preset-react": "^6.3.13",
+    "chai": "^3.4.1",
+    "enzyme": "^1.2.0",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^2.1.1",
+    "eslint-plugin-react": "^3.13.1",
+    "husky": "^0.10.2",
+    "mocha": "^2.3.4",
+    "react-addons-test-utils": "^0.14.5",
+    "react-dom": "^0.14.5",
+    "rimraf": "^2.5.0",
+    "rollup": "^0.23.1",
+    "rollup-plugin-babel": "^2.3.3",
+    "rollup-plugin-json": "^2.0.0"
+  }
+}
