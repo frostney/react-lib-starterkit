@@ -41,6 +41,8 @@
     "eslint-config-airbnb": "^2.1.1",
     "eslint-plugin-react": "^3.13.1",
     "husky": "^0.10.2",
+    "karma": "^0.13.16",
+    "karma-rollup-preprocessor": "^2.0.0",
     "mocha": "^2.3.4",
     "react-addons-test-utils": "^0.14.5",
     "react-dom": "^0.14.5",
