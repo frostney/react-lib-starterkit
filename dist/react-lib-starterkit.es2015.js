@@ -1,12 +1,14 @@
 import React, { Component, PropTypes } from 'react';
 
-function babelHelpers_classCallCheck (instance, Constructor) {
+var babelHelpers = {};
+
+babelHelpers.classCallCheck = function (instance, Constructor) {
   if (!(instance instanceof Constructor)) {
     throw new TypeError("Cannot call a class as a function");
   }
 };
 
-function babelHelpers_inherits (subClass, superClass) {
+babelHelpers.inherits = function (subClass, superClass) {
   if (typeof superClass !== "function" && superClass !== null) {
     throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
   }
@@ -22,7 +24,7 @@ function babelHelpers_inherits (subClass, superClass) {
   if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
 };
 
-function babelHelpers_possibleConstructorReturn (self, call) {
+babelHelpers.possibleConstructorReturn = function (self, call) {
   if (!self) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
   }
@@ -30,12 +32,14 @@ function babelHelpers_possibleConstructorReturn (self, call) {
   return call && (typeof call === "object" || typeof call === "function") ? call : self;
 };
 
-var InputSomething = (function (_Component) {
-  babelHelpers_inherits(InputSomething, _Component);
+babelHelpers;
+
+var InputSomething = function (_Component) {
+  babelHelpers.inherits(InputSomething, _Component);
 
   function InputSomething() {
-    babelHelpers_classCallCheck(this, InputSomething);
-    return babelHelpers_possibleConstructorReturn(this, _Component.apply(this, arguments));
+    babelHelpers.classCallCheck(this, InputSomething);
+    return babelHelpers.possibleConstructorReturn(this, _Component.apply(this, arguments));
   }
 
   InputSomething.prototype.render = function render() {
@@ -43,14 +47,14 @@ var InputSomething = (function (_Component) {
   };
 
   return InputSomething;
-})(Component);
+}(Component);
 
-var HelloWorld = (function (_Component) {
-  babelHelpers_inherits(HelloWorld, _Component);
+var HelloWorld = function (_Component) {
+  babelHelpers.inherits(HelloWorld, _Component);
 
   function HelloWorld() {
-    babelHelpers_classCallCheck(this, HelloWorld);
-    return babelHelpers_possibleConstructorReturn(this, _Component.apply(this, arguments));
+    babelHelpers.classCallCheck(this, HelloWorld);
+    return babelHelpers.possibleConstructorReturn(this, _Component.apply(this, arguments));
   }
 
   HelloWorld.prototype.render = function render() {
@@ -63,7 +67,7 @@ var HelloWorld = (function (_Component) {
   };
 
   return HelloWorld;
-})(Component);
+}(Component);
 
 HelloWorld.propTypes = {
   name: PropTypes.string
