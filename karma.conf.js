@@ -1,43 +1,33 @@
 var path = require('path');
-var webpack = require('webpack');
+var fs = require('fs');
 
 module.exports = function(config) {
   config.set({
     basePath: '',
-    frameworks: ['phantomjs-shim', 'mocha', 'chai'],
+    frameworks: ['mocha', 'chai'],
     files: [
       'test/index.js'
     ],
-    webpack: {
-      devtool: 'eval',
-
-      module: {
-        preLoaders: [{
-          test: /\.js$/,
-          loader: 'babel-istanbul-loader',
-          exclude: /(node_modules|test)/,
-        }, {
-          test: /\.js$/,
-          loader: 'babel-loader',
-          exclude: /(node_modules|src)/,
-        }],
+    preprocessors: {
+      'test/index.js': ['rollup'],
+    },
+    rollupPreprocessor: {
+      rollup: {
+        plugins: [
+          require('rollup-plugin-babel')()
+        ]
       },
-      resolve: {
-        extensions: ['', '.js', '.jsx'],
-        alias: {
-          'react-lib-starterkit': path.join(__dirname, 'dist', 'react-lib-starterkit')
-        }
-      },
+      bundle: {
+        sourceMap: 'inline'
+      }
     },
 
-    coverageReporter: {
-      type: 'lcov',
-      dir: 'coverage/',
-    },
-
-    webpackServer: {
-      noInfo: true,
-    },
+    plugins: [
+      'karma-mocha',
+      'karma-chai',
+      'karma-phantomjs-launcher',
+      'karma-rollup-preprocessor'
+    ],
 
     exclude: [],
     port: 8080,
@@ -53,7 +43,7 @@ module.exports = function(config) {
     // - PhantomJS
     // - IE (only Windows)
     browsers: ['PhantomJS'],
-    reporters: ['progress', 'coverage'],
+    reporters: ['progress'],
     captureTimeout: 60000,
     singleRun: true,
   });
