@@ -14,7 +14,8 @@ module.exports = function(config) {
     rollupPreprocessor: {
       rollup: {
         plugins: [
-          require('rollup-plugin-babel')()
+          require('rollup-plugin-babel')(),
+          require('rollup-plugin-npm')()
         ]
       },
       bundle: {
