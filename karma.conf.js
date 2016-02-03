@@ -15,7 +15,8 @@ module.exports = function(config) {
       rollup: {
         plugins: [
           require('rollup-plugin-babel')(),
-          require('rollup-plugin-npm')()
+          require('rollup-plugin-npm')(),
+          require('rollup-plugin-commonjs')()
         ]
       },
       bundle: {
