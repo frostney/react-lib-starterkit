@@ -23,13 +23,6 @@ module.exports = function(config) {
       }
     },
 
-    plugins: [
-      'karma-mocha',
-      'karma-chai',
-      'karma-phantomjs-launcher',
-      'karma-rollup-preprocessor'
-    ],
-
     exclude: [],
     port: 8080,
     logLevel: config.LOG_INFO,
