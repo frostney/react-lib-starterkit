@@ -1,5 +1,5 @@
 import React from 'react';
-import { InputSomething } from '../dist/react-lib-starterkit';
+import { InputSomething } from '../dist/react-lib-starterkit.es2015';
 
 import { shallow } from 'enzyme';
 import { expect } from 'chai';

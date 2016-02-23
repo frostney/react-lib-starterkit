@@ -9,18 +9,37 @@ module.exports = function(config) {
       'test/index.js'
     ],
     preprocessors: {
-      'test/index.js': ['rollup'],
+      'test/index.js': ['webpack', 'sourcemap'],
     },
-    rollupPreprocessor: {
-      rollup: {
-        plugins: [
-          require('rollup-plugin-babel')(),
-          require('rollup-plugin-npm')(),
-          require('rollup-plugin-commonjs')()
-        ]
-      },
-      bundle: {
-        sourceMap: 'inline'
+    coverageReporter: {
+      type: 'lcov',
+      dir: 'coverage/',
+    },
+    webpack: {
+      cache: true,
+      devtool: 'eval-source-map',
+      module: {
+        preLoaders: [{
+          test: /\.jsx?$/,
+          loader: 'babel-istanbul',
+          exclude: /(node_modules|test)/,
+          query: {
+            presets: ['react', 'es2015-loose'],
+            plugins: ['transform-class-properties']
+          }
+        }, {
+          test: /\.jsx?$/,
+          loader: 'babel',
+          exclude: /(node_modules|src)/,
+          query: {
+            presets: ['react', 'es2015-loose'],
+            plugins: ['transform-class-properties']
+          }
+        }],
+        loaders: [{
+          test: /\.json$/,
+          loader: 'json',
+        }]
       }
     },
 
