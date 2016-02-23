@@ -29,7 +29,6 @@
   },
   "homepage": "https://github.com/frostney/react-lib-starterkit#readme",
   "dependencies": {
-    "babel-loader": "^6.2.3",
     "react": "^0.14.5"
   },
   "devDependencies": {
