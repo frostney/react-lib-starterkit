@@ -1,6 +1,6 @@
 {
   "name": "react-lib-starterkit",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Starterkit for React libraries",
   "main": "dist/react-lib-starterkit.js",
   "scripts": {
