@@ -32,8 +32,8 @@ I prefer Webpack for apps, because Webpacks allows more or and more precise opti
 
 
 ### Things to improve on
-- Add code coverage
-
+- Add code coverage with coveralls
+- Add Travis file
 
 ### License
 MIT
