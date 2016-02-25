@@ -32,10 +32,8 @@ I prefer Webpack for apps, because Webpacks allows more or and more precise opti
 
 
 ### Things to improve on
+- Add code coverage
 
-
-### Warning
-Tests are currently not working!
 
 ### License
 MIT
