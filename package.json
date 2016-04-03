@@ -8,7 +8,7 @@
     "build": "rollup-babel-lib-bundler src/index.js",
     "lint": "eslint .",
     "test": "ava --verbose 'src/**/*.test.js'",
-    "coverage": "node --require babel-register ./node_modules/.bin/nyc --all --reporter lcov --reporter html npm test",
+    "coverage": "nyc --reporter lcov --reporter html ava 'src/**/*.test.js'",
     "precommit": "npm run lint",
     "prepublish": "in-publish && npm run build || not-in-publish"
   },
