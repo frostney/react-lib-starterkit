@@ -29,7 +29,7 @@
     "url": "https://github.com/frostney/react-lib-starterkit/issues"
   },
   "homepage": "https://github.com/frostney/react-lib-starterkit#readme",
-  "dependencies": {
+  "peerDependencies": {
     "react": "^15.0.1"
   },
   "ava": {
