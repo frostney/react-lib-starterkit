@@ -11,7 +11,7 @@
     "test": "ava --verbose 'src/**/*.test.js'",
     "coverage": "nyc --reporter lcov --reporter html ava 'src/**/*.test.js'",
     "precommit": "npm run lint",
-    "prepublish": "in-publish && npm run build || not-in-publish"
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
